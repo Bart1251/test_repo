@@ -1,4 +1,6 @@
-﻿namespace test
+﻿using System.Runtime.ConstrainedExecution;
+
+namespace test
 {
     public class AlbumData
     {
@@ -8,6 +10,13 @@
         public int Year { get; set; }
         public int DownloadNumber { get; set; }
 
+        /**********************************************
+        nazwa funkcji: ReadAlbumsFromFile
+        opis funkcji: Funkcja wczytuje z pliku dane albumów i zwraca je w formie listy
+        parametry: path - ścieżka do pliku z którego będą wczytane dane
+        zwracany typ i opis: List<AlbumData> lista albumów z pliku
+        autor: Bartlomiej Wiecek
+        ***********************************************/
         public static List<AlbumData> ReadAlbumsFromFile(string path)
         {
             string[] lines = File.ReadAllLines(path);
