@@ -13,7 +13,7 @@ namespace test.Tests
                 new AlbumData() { Artist = "Artist2", Album = "\"Album2\"", SongsNumber = 5, Year = 2005, DownloadNumber = 231272 },
             };
             Assert.Equal(expected.Count, actual.Count);
-            Assert.Equal(expected, actual);
+            Assert.Equivalent(expected, actual);
         }
     }
 }
